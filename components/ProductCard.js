@@ -1,8 +1,7 @@
 import React from 'react';
 import { ScrollView, View, Text, Button } from 'react-native';
-import Header from '../components/Header';
 
-class ProductScreen extends React.Component {
+class ProductCard extends React.Component {
   state = {};
 
   render() {
@@ -10,17 +9,13 @@ class ProductScreen extends React.Component {
 
     return (
       <ScrollView>
-        <Header
-          title="Product 1"
-          subtitle="very very nice"
-        />
         <View>
           <Text>
-            This is the Product Screen
+            This is a Product
           </Text>
           <Button
             title="BUTTON"
-            onPress={() => navigation.navigate('ProductScreen')}
+            onPress={() => navigation.navigate('Product')}
           />
         </View>
       </ScrollView>
@@ -28,4 +23,4 @@ class ProductScreen extends React.Component {
   }
 }
 
-export default ProductScreen;
+export default ProductCard;
