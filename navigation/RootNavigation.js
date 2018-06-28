@@ -1,19 +1,32 @@
+import React from 'react';
 import { createStackNavigator } from 'react-navigation';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-import ListScreen from '../screens/ListScreen';
+import DrawerNavigator from './DrawerNavigation';
 import ProductScreen from '../screens/ProductScreen';
-import LoginScreen from '../screens/LoginScreen';
+
+const doSomething = () => {
+  alert('Is this the real life? Is this just fantasy?');
+};
+
+const styles = StyleSheet.create({
+  button: {
+    padding: 8,
+  },
+});
 
 export default createStackNavigator(
   {
-    ListScreen: {
-      screen: ListScreen,
+    Home: {
+      screen: DrawerNavigator,
     },
-    LoginScreen: {
-      screen: LoginScreen,
-    },
-    ProductScreen: {
+    Product: {
       screen: ProductScreen,
     },
+  },
+  {
+    navigationOptions: () => ({
+      header: null,
+    }),
   },
 );

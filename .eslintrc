@@ -30,6 +30,7 @@
     "jsx-a11y/no-noninteractive-element-interactions": ["off"],
     "jsx-a11y/no-static-element-interactions": ["off"],
     "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "no-alert": 0
   }
 }

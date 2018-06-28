@@ -1,18 +1,19 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, SafeAreaView, StatusBar } from 'react-native';
 import RootNavigation from './navigation/RootNavigation';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f1f1f1',
+    backgroundColor: '#ffffff',
   },
 });
 
 const App = () => (
-  <View style={styles.container}>
+  <SafeAreaView style={styles.container}>
+    <StatusBar barStyle="dark-content" />
     <RootNavigation />
-  </View>
+  </SafeAreaView>
 );
 
 export default App;

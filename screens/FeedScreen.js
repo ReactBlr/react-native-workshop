@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, View, Text, Button } from 'react-native';
 
-class ListScreen extends React.Component {
+class FeedScreen extends React.Component {
   state = {};
 
   render() {
@@ -11,11 +11,11 @@ class ListScreen extends React.Component {
       <ScrollView>
         <View>
           <Text>
-            This is the List Screen
+            This is the FeedScreen
           </Text>
           <Button
             title="BUTTON"
-            onPress={() => navigation.navigate('ProductScreen')}
+            onPress={() => navigation.navigate('Product')}
           />
         </View>
       </ScrollView>
@@ -23,4 +23,4 @@ class ListScreen extends React.Component {
   }
 }
 
-export default ListScreen;
+export default FeedScreen;
