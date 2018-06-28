@@ -11,13 +11,17 @@ const styles = StyleSheet.create({
 });
 
 const showApiCalls = () => {
+  const baseUrl = 'http://www.mocky.io/';
   global._fetch = fetch;
   global.fetch = async (uri, options, ...args) => {
     const response = await global._fetch(uri, options, ...args);
-    console.log(
-      uri,
-      { request: { uri }, response },
-    );
+    if (uri.includes(baseUrl)) {
+      console.log(
+        'API Call: ',
+        uri,
+        { request: { uri }, response },
+      );
+    }
     return response;
   };
 };
