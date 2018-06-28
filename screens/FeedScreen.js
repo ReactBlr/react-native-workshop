@@ -28,7 +28,6 @@ class FeedScreen extends React.Component {
     try {
       const response = await fetch(GET_DATA_URL);
       const { data } = await response.json();
-      console.warn(data);
       this.setState({ isLoading: false, data });
     } catch (err) {
       console.warn(err);
@@ -48,8 +47,11 @@ class FeedScreen extends React.Component {
       <FlatList
         data={data}
         keyExtractor={(item) => item.id}
-        renderItem={(item) => (
-          <ProductCard item={item} navigation={navigation} />
+        renderItem={({ item }) => (
+          <ProductCard
+            product={item}
+            navigation={navigation}
+          />
         )}
       />
     );

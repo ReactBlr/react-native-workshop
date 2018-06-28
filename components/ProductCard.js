@@ -1,24 +1,29 @@
 import React from 'react';
-import { ScrollView, View, Text, Button } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: 'white',
+
+  },
+});
 
 class ProductCard extends React.Component {
   state = {};
 
   render() {
-    const { navigation } = this.props;
+    const { navigation, product } = this.props;
 
     return (
-      <ScrollView>
-        <View>
-          <Text>
-            This is a Product
-          </Text>
-          <Button
-            title="BUTTON"
-            onPress={() => navigation.navigate('Product')}
-          />
-        </View>
-      </ScrollView>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Product', product)}
+        style={styles.card}
+      >
+        {console.warn(product)}
+        <Text>
+          {product.title}
+        </Text>
+      </TouchableOpacity>
     );
   }
 }

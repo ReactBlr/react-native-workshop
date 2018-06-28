@@ -17,7 +17,7 @@ const showApiCalls = () => {
     const response = await global._fetch(uri, options, ...args);
     if (uri.includes(baseUrl)) {
       console.log(
-        'API Call: ',
+        '🔵 API Call: ',
         uri,
         { request: { uri }, response },
       );
