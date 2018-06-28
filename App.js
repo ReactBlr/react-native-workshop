@@ -1,21 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
-  }
-}
+import { StyleSheet, View } from 'react-native';
+import RootNavigation from './navigation/RootNavigation';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f1f1f1',
   },
 });
+
+const App = () => (
+  <View style={styles.container}>
+    <RootNavigation />
+  </View>
+);
+
+export default App;
