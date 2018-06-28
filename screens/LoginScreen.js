@@ -21,6 +21,8 @@ const styles = StyleSheet.create({
   },
   image: {
     alignSelf: 'center',
+    height: 200,
+    width: 200,
   },
   textInput: {
     backgroundColor: 'white',
@@ -48,7 +50,11 @@ class LoginScreen extends React.Component {
 
   render() {
     return (
-      <KeyboardAvoidingView style={styles.form} behavior="padding" keyboardVerticalOffset={54}>
+      <KeyboardAvoidingView
+        style={styles.form}
+        behavior="padding"
+        keyboardVerticalOffset={54}
+      >
         <Image
           source={AwesomeImage}
           style={styles.image}
@@ -58,6 +64,7 @@ class LoginScreen extends React.Component {
           placeholder="Username"
           maxLength={10}
           autoCapitalize="none"
+          underlineColorAndroid="transparent"
         />
         <TextInput
           style={styles.textInput}
@@ -65,6 +72,7 @@ class LoginScreen extends React.Component {
           maxLength={32}
           secureTextEntry
           autoCapitalize="none"
+          underlineColorAndroid="transparent"
         />
         <View>
           <TouchableOpacity

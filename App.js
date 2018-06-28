@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, StatusBar } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
+import MyStatusBar from './components/MyStatusBar';
 import RootNavigation from './navigation/RootNavigation';
 
 const styles = StyleSheet.create({
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
 
 const App = () => (
   <SafeAreaView style={styles.container}>
-    <StatusBar barStyle="dark-content" />
+    <MyStatusBar />
     <RootNavigation />
   </SafeAreaView>
 );
