@@ -1,26 +1,57 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
+import { ActivityIndicator, FlatList, StyleSheet } from 'react-native';
 import ProductCard from '../components/ProductCard';
 
+const GET_DATA_URL = 'http://www.mocky.io/v2/5b354c2e2f0000190437627c';
+
+const styles = StyleSheet.create({
+  activityIndicator: {
+    paddingTop: 40,
+  },
+});
+
 class FeedScreen extends React.Component {
-  state = {};
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLoading: true,
+      data: [],
+    };
+  }
+
+  componentDidMount() {
+    this.callApi();
+  }
+
+  callApi = async () => {
+    try {
+      const response = await fetch(GET_DATA_URL);
+      const { data } = await response.json();
+      console.warn(data);
+      this.setState({ isLoading: false, data });
+    } catch (err) {
+      console.warn(err);
+    }
+  }
 
   render() {
     const { navigation } = this.props;
+    const { isLoading, data } = this.state;
 
+    if (isLoading) {
+      return (
+        <ActivityIndicator style={styles.activityIndicator} size="large" />
+      );
+    }
     return (
-      <View>
-        <ScrollView>
-          <ProductCard navigation={navigation} />
-          <ProductCard navigation={navigation} />
-          <ProductCard navigation={navigation} />
-          <ProductCard navigation={navigation} />
-          <ProductCard navigation={navigation} />
-          <ProductCard navigation={navigation} />
-          <ProductCard navigation={navigation} />
-          <ProductCard navigation={navigation} />
-        </ScrollView>
-      </View>
+      <FlatList
+        data={data}
+        keyExtractor={(item) => item.id}
+        renderItem={(item) => (
+          <ProductCard item={item} navigation={navigation} />
+        )}
+      />
     );
   }
 }
