@@ -1,10 +1,30 @@
 import React from 'react';
-import { ActivityIndicator, FlatList, StyleSheet } from 'react-native';
+import { ActivityIndicator, FlatList, StyleSheet, View, Text, Image } from 'react-native';
 import ProductCard from '../components/ProductCard';
 
-const GET_DATA_URL = 'http://www.mocky.io/v2/5b354c2e2f0000190437627c';
+const GET_DATA_URL = 'http://www.mocky.io/v2/5b35cb7c2f0000692d3763c5';
+const AwesomeImage = require('../assets/icon.png');
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  headerContainer: {
+    backgroundColor: 'purple',
+    padding: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  headerImage: {
+    height: 32,
+    width: 32,
+  },
+  headerText: {
+    color: 'white',
+    marginLeft: 8,
+    fontWeight: '400',
+    fontSize: 16,
+  },
   activityIndicator: {
     paddingTop: 40,
   },
@@ -38,22 +58,30 @@ class FeedScreen extends React.Component {
     const { navigation } = this.props;
     const { isLoading, data } = this.state;
 
-    if (isLoading) {
-      return (
-        <ActivityIndicator style={styles.activityIndicator} size="large" />
-      );
-    }
     return (
-      <FlatList
-        data={data}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <ProductCard
-            product={item}
-            navigation={navigation}
-          />
-        )}
-      />
+      <View style={styles.container}>
+        <View style={styles.headerContainer}>
+          <Image style={styles.headerImage} source={AwesomeImage} />
+          <Text style={styles.headerText}>
+            Simple shopping app
+          </Text>
+        </View>
+        {isLoading
+          ? <ActivityIndicator style={styles.activityIndicator} size="large" />
+          : (
+            <FlatList
+              data={data}
+              keyExtractor={(item) => item.id}
+              renderItem={({ item }) => (
+                <ProductCard
+                  product={item}
+                  navigation={navigation}
+                />
+              )}
+            />
+          )
+        }
+      </View>
     );
   }
 }
