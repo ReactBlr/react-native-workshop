@@ -8,7 +8,7 @@ const Header = ({ navigation, title, subtitle }) => (
     <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
       <Ionicons name="ios-arrow-back" size={24} color="purple" />
     </TouchableOpacity>
-    <View style={styles.textContainer}>
+    <View>
       {!!title && (
         <Text style={styles.title}>
           {title}
@@ -36,8 +36,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 8,
     left: 0,
-  },
-  textContainer: {
   },
   title: {
     fontWeight: '500',
