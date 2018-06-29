@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-workshop",
-    "description": "This project is really great.",
+    "name": "RNShop",
+    "description": "A rather simple boilerplate with some alleged React Native best practices. ",
     "slug": "react-native-workshop",
     "privacy": "public",
     "sdkVersion": "28.0.0",
@@ -9,7 +9,7 @@
       "ios",
       "android"
     ],
-    "version": "1.0.0",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
