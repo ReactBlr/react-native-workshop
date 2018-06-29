@@ -11,40 +11,6 @@ import {
 
 const AwesomeImage = require('../assets/icon.png');
 
-const styles = StyleSheet.create({
-  form: {
-    flex: 1,
-    paddingTop: 40,
-    paddingHorizontal: 16,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  image: {
-    alignSelf: 'center',
-    height: 200,
-    width: 200,
-  },
-  textInput: {
-    backgroundColor: 'white',
-    marginTop: 24,
-    padding: 8,
-    height: 40,
-    width: 240,
-    borderRadius: 2,
-  },
-  button: {
-    backgroundColor: 'purple',
-    padding: 8,
-    borderRadius: 2,
-    marginTop: 24,
-    width: 240,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: 'white',
-  },
-});
-
 class LoginScreen extends React.Component {
   state = {};
 
@@ -80,7 +46,7 @@ class LoginScreen extends React.Component {
             style={styles.button}
           >
             <Text style={styles.buttonText}>
-                Login
+              Login
             </Text>
           </TouchableOpacity>
         </View>
@@ -90,3 +56,37 @@ class LoginScreen extends React.Component {
 }
 
 export default LoginScreen;
+
+const styles = StyleSheet.create({
+  form: {
+    flex: 1,
+    paddingTop: 40,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    alignSelf: 'center',
+    height: 200,
+    width: 200,
+  },
+  textInput: {
+    backgroundColor: 'white',
+    marginTop: 24,
+    padding: 8,
+    height: 40,
+    width: 240,
+    borderRadius: 4,
+  },
+  button: {
+    backgroundColor: 'purple',
+    padding: 8,
+    borderRadius: 4,
+    marginTop: 24,
+    width: 240,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: 'white',
+  },
+});

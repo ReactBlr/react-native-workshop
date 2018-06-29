@@ -5,31 +5,6 @@ import ProductCard from '../components/ProductCard';
 const GET_DATA_URL = 'http://www.mocky.io/v2/5b35cb7c2f0000692d3763c5';
 const AwesomeImage = require('../assets/icon.png');
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  headerContainer: {
-    backgroundColor: 'purple',
-    padding: 8,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  headerImage: {
-    height: 32,
-    width: 32,
-  },
-  headerText: {
-    color: 'white',
-    marginLeft: 8,
-    fontWeight: '400',
-    fontSize: 16,
-  },
-  activityIndicator: {
-    paddingTop: 40,
-  },
-});
-
 class FeedScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -79,11 +54,35 @@ class FeedScreen extends React.Component {
                 />
               )}
             />
-          )
-        }
+          )}
       </View>
     );
   }
 }
 
 export default FeedScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  headerContainer: {
+    backgroundColor: 'purple',
+    padding: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  headerImage: {
+    height: 32,
+    width: 32,
+  },
+  headerText: {
+    color: 'white',
+    marginLeft: 8,
+    fontWeight: '400',
+    fontSize: 16,
+  },
+  activityIndicator: {
+    paddingTop: 40,
+  },
+});

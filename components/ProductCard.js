@@ -1,21 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet, Image, View } from 'react-native';
 
-const styles = StyleSheet.create({
-  card: {
-    backgroundColor: 'white',
-    marginTop: 16,
-    borderRadius: 2,
-    elevation: 1,
-    flexDirection: 'row',
-    padding: 8,
-  },
-  image: {
-    height: 120,
-    width: 120,
-  },
-});
-
 class ProductCard extends React.Component {
   state = {};
 
@@ -61,3 +46,18 @@ class ProductCard extends React.Component {
 }
 
 export default ProductCard;
+
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: 'white',
+    marginTop: 16,
+    borderRadius: 2,
+    elevation: 1,
+    flexDirection: 'row',
+    padding: 8,
+  },
+  image: {
+    height: 120,
+    width: 120,
+  },
+});

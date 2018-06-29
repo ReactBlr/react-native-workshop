@@ -5,15 +5,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import FeedScreen from '../screens/FeedScreen';
 import LoginScreen from '../screens/LoginScreen';
 
-// This can also be written as:
-//
-// export default createBottomTabNavigator(
-//   {
-//     LoginScreen,
-//     ListScreen,
-//   },
-// );
-
 export default createBottomTabNavigator(
   {
     Home: {

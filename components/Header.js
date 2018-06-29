@@ -3,6 +3,28 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { withNavigation } from 'react-navigation';
 
+const Header = ({ navigation, title, subtitle }) => (
+  <View style={styles.header}>
+    <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+      <Ionicons name="ios-arrow-back" size={24} color="purple" />
+    </TouchableOpacity>
+    <View style={styles.textContainer}>
+      {!!title && (
+        <Text style={styles.title}>
+          {title}
+        </Text>
+      )}
+      {!!subtitle && (
+        <Text style={styles.subTitle}>
+          {subtitle}
+        </Text>
+      )}
+    </View>
+  </View>
+);
+
+export default withNavigation(Header);
+
 const styles = StyleSheet.create({
   header: {
     backgroundColor: 'white',
@@ -26,25 +48,3 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
 });
-
-const Header = ({ navigation, title, subtitle }) => (
-  <View style={styles.header}>
-    <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-      <Ionicons name="ios-arrow-back" size={24} color="purple" />
-    </TouchableOpacity>
-    <View style={styles.textContainer}>
-      {!!title && (
-        <Text style={styles.title}>
-          {title}
-        </Text>
-      )}
-      {!!subtitle && (
-        <Text style={styles.subTitle}>
-          {subtitle}
-        </Text>
-      )}
-    </View>
-  </View>
-);
-
-export default withNavigation(Header);
