@@ -24,17 +24,17 @@ class ProductCard extends React.Component {
           resizeMode="contain"
         />
         <View>
-          <Text>
+          <Text style={styles.title}>
             {product.title}
           </Text>
           {isProductAvailable
             ? (
-              <Text>
-                {product.price}
+              <Text style={styles.price}>
+                {`₹ ${product.price}`}
               </Text>
             )
             : (
-              <Text>
+              <Text style={styles.soldOutText}>
                 Sold Out
               </Text>
             )
@@ -59,5 +59,18 @@ const styles = StyleSheet.create({
   image: {
     height: 120,
     width: 120,
+  },
+  title: {
+    fontWeight: '500',
+    fontSize: 18,
+  },
+  price: {
+    paddingTop: 8,
+    fontSize: 16,
+  },
+  soldOutText: {
+    paddingTop: 8,
+    color: '#fc6c85',
+    fontWeight: '500',
   },
 });
