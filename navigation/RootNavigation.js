@@ -1,12 +1,12 @@
 import { createStackNavigator } from 'react-navigation';
 
-import DrawerNavigator from './DrawerNavigation';
+import FeedScreen from '../screens/FeedScreen';
 import ProductScreen from '../screens/ProductScreen';
 
 export default createStackNavigator(
   {
     Home: {
-      screen: DrawerNavigator,
+      screen: FeedScreen,
     },
     Product: {
       screen: ProductScreen,
