@@ -7,6 +7,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#eee',
   },
+  title: {
+    fontWeight: '500',
+    fontSize: 24,
+  },
 });
 
 class App extends React.Component {
@@ -16,7 +20,7 @@ class App extends React.Component {
     return (
       <SafeAreaView style={styles.container}>
         <MyStatusBar />
-        <Text>
+        <Text style={styles.title}>
           This boilerplate is noice.
         </Text>
       </SafeAreaView>
