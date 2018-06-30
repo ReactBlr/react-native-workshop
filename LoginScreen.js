@@ -7,7 +7,6 @@ import {
   StyleSheet,
   Image,
   View,
-  AsyncStorage,
 } from 'react-native';
 
 const AwesomeImage = require('./assets/icon.png');
@@ -21,29 +20,16 @@ class LoginScreen extends React.Component {
     currentUser: '',
   };
 
-  componentDidMount() {
-    this.checkExistingSession();
-  }
-
   handleLogin = () => {
     const enteredUsername = this.usernameRef._lastNativeText;
     const enteredPassword = this.passwordRef._lastNativeText;
 
     if (enteredPassword === PASSWORD && enteredUsername === USERNAME) {
       this.setState({ isLoggedIn: true, currentUser: enteredUsername });
-      AsyncStorage.setItem('currentUser', enteredUsername);
-    }
-  }
-
-  checkExistingSession = async () => {
-    const currentUser = await AsyncStorage.getItem('currentUser');
-    if (currentUser) {
-      this.setState({ isLoggedIn: true, currentUser });
     }
   }
 
   handleLogout = () => {
-    AsyncStorage.removeItem('currentUser');
     alert('Logged out successfully!');
     this.setState({ isLoggedIn: false, currentUser: '' });
   }
