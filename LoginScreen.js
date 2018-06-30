@@ -71,16 +71,14 @@ class LoginScreen extends React.Component {
                 onSubmitEditing={this.handleLogin}
                 returnKeyType="done"
               />
-              <View>
-                <TouchableOpacity
-                  onPress={this.handleLogin}
-                  style={styles.button}
-                >
-                  <Text style={styles.buttonText}>
-                    Login
-                  </Text>
-                </TouchableOpacity>
-              </View>
+              <TouchableOpacity
+                onPress={this.handleLogin}
+                style={styles.button}
+              >
+                <Text style={styles.buttonText}>
+                  Login
+                </Text>
+              </TouchableOpacity>
             </KeyboardAvoidingView>
           )
           : (
