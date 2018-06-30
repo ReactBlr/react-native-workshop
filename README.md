@@ -9,10 +9,13 @@ To create a simple example for a React Native e-commerce app.
 3. On clicking a particular product, navigate to a screen where you display all other details
 
 Concepts covered:
-1. RN Components (View, Text, Image, ScrollView, KeyboardAvoidingView, etc.)
-2. Styling
-3. AsyncStorage
-4. Linting Setup
-5. React Navigation - Stack and Drawer Navigators
-6. Passing props while navigating
-7. Using internal state
+
+1. Setting up a project
+2. RN Components (View, Text, Image, ScrollView, KeyboardAvoidingView, etc.)
+3. Styling
+4. AsyncStorage
+5. Linting Setup
+6. React Navigation - Stack and Drawer Navigators
+7. Passing props while navigating
+8. Using internal state
+9. Project structure
