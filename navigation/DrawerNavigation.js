@@ -2,8 +2,8 @@ import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import FeedScreen from '../screens/FeedScreen';
-import LoginScreen from '../screens/LoginScreen';
+import FeedScreen from '../feed/FeedScreen';
+import LoginScreen from '../auth/LoginScreen';
 
 export default createBottomTabNavigator(
   {

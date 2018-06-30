@@ -1,7 +1,7 @@
 import { createStackNavigator } from 'react-navigation';
 
 import DrawerNavigator from './DrawerNavigation';
-import ProductScreen from '../screens/ProductScreen';
+import ProductScreen from '../product/ProductScreen';
 
 export default createStackNavigator(
   {

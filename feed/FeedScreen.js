@@ -1,6 +1,6 @@
 import React from 'react';
 import { ActivityIndicator, FlatList, StyleSheet, View, Text, Image } from 'react-native';
-import ProductCard from '../components/ProductCard';
+import ProductCard from '../product/ProductCard';
 
 const GET_DATA_URL = 'http://www.mocky.io/v2/5b35cb7c2f0000692d3763c5';
 const AwesomeImage = require('../assets/icon.png');
