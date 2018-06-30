@@ -10,7 +10,7 @@ import {
   AsyncStorage,
 } from 'react-native';
 
-const AwesomeImage = require('../assets/icon.png');
+const AwesomeImage = require('./assets/icon.png');
 
 const USERNAME = 'admin';
 const PASSWORD = 'password';
