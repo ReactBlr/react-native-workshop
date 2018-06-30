@@ -5,13 +5,12 @@ class ProductCard extends React.Component {
   state = {};
 
   render() {
-    const { navigation, product } = this.props;
-
+    const { product } = this.props;
     const isProductAvailable = product.availability === 'in stock';
 
     return (
       <TouchableOpacity
-        onPress={() => navigation.navigate('Product', product)}
+        onPress={() => alert(`Product: \n${JSON.stringify(product, ':', 2)}`)}
         activeOpacity={0.8}
         style={styles.card}
       >

@@ -30,7 +30,6 @@ class FeedScreen extends React.Component {
   }
 
   render() {
-    const { navigation } = this.props;
     const { isLoading, data } = this.state;
 
     return (
@@ -48,10 +47,7 @@ class FeedScreen extends React.Component {
               data={data}
               keyExtractor={(item) => item.id}
               renderItem={({ item }) => (
-                <ProductCard
-                  product={item}
-                  navigation={navigation}
-                />
+                <ProductCard product={item} />
               )}
             />
           )}
