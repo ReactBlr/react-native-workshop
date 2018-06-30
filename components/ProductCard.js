@@ -1,6 +1,11 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet, Image, View } from 'react-native';
 
+const showAlert = (product) => {
+  alert(`Product: \n${JSON.stringify(product, ':', 4)}`);
+  console.log(JSON.stringify(product, ':', 4));
+};
+
 class ProductCard extends React.Component {
   state = {};
 
@@ -10,7 +15,7 @@ class ProductCard extends React.Component {
 
     return (
       <TouchableOpacity
-        onPress={() => alert(`Product: \n${JSON.stringify(product, ':', 2)}`)}
+        onPress={() => showAlert(product)}
         activeOpacity={0.8}
         style={styles.card}
       >
