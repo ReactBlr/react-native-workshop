@@ -4,7 +4,7 @@
     "description": "A rather simple boilerplate with some alleged React Native best practices. ",
     "slug": "react-native-workshop",
     "privacy": "public",
-    "sdkVersion": "28.0.0",
+    "sdkVersion": "32.0.0",
     "platforms": [
       "ios",
       "android"
