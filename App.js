@@ -10,21 +10,21 @@ const styles = StyleSheet.create({
   },
 });
 
-const showApiCalls = () => {
-  const baseUrl = 'http://www.mocky.io/';
-  global._fetch = fetch;
-  global.fetch = async (uri, options, ...args) => {
-    const response = await global._fetch(uri, options, ...args);
-    if (uri.includes(baseUrl)) {
-      console.log(
-        '🔵 API Call: ',
-        uri,
-        { request: { uri }, response },
-      );
-    }
-    return response;
-  };
-};
+// const showApiCalls = () => {
+//   const baseUrl = 'http://www.mocky.io/';
+//   global._fetch = fetch;
+//   global.fetch = async (uri, options, ...args) => {
+//     const response = await global._fetch(uri, options, ...args);
+//     if (uri.includes(baseUrl)) {
+//       console.log(
+//         '🔵 API Call: ',
+//         uri,
+//         { request: { uri }, response },
+//       );
+//     }
+//     return response;
+//   };
+// };
 
 class App extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class App extends React.Component {
 
     if (__DEV__) {
       console.disableYellowBox = true;
-      showApiCalls();
+      // showApiCalls();
     }
   }
 

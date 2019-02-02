@@ -16,13 +16,13 @@ export default createBottomTabNavigator(
   },
   {
     navigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, tintColor }) => {
+      tabBarIcon: ({ tintColor }) => {
         const { routeName } = navigation.state;
         let iconName;
         if (routeName === 'Home') {
-          iconName = `ios-home${focused ? '' : '-outline'}`;
+          iconName = 'ios-home';
         } else if (routeName === 'Profile') {
-          iconName = `ios-contact${focused ? '' : '-outline'}`;
+          iconName = 'ios-person';
         }
 
         return <Ionicons name={iconName} size={24} color={tintColor} />;
