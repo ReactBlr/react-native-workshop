@@ -3,6 +3,10 @@ import { StyleSheet, SafeAreaView } from 'react-native';
 import MyStatusBar from './components/MyStatusBar';
 import RootNavigation from './navigation/RootNavigation';
 
+if (__DEV__) {
+  import('./ReactotronConfig').then(() => console.log('Reactotron Configured'));
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
